@@ -5,8 +5,11 @@ import BotonMinTarea from './BotonMinTarea.jsx'
 function ContenedorBotones() {
   return (
     <>
-        <BotonBorrar />
-        <BotonMinTarea />
+      <hr className="counter" />
+      <div className="counter-container">
+      <BotonBorrar />
+      <BotonMinTarea />
+      </div>
     </>
     )
 }
