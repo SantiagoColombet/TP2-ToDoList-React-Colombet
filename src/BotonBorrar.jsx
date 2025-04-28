@@ -1,8 +1,9 @@
 import React from 'react'
 
-function BotonBorrar() {
+function BotonBorrar({borrarTodas}) {
   return (
-    <button id="deleteButton">Delete All</button>
+    <button id="deleteButton" onClick={borrarTodas}>Delete All</button>
+
     )
 }
 

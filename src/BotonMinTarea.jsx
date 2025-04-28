@@ -1,8 +1,8 @@
 import React from 'react'
 
-function BotonMinTarea() {
+function BotonMinTarea({encontrarTareaMasRapida}) {
   return (
-    <button id="minTarea"> Tarea más rapida</button>
+    <button id="minTarea" onClick={encontrarTareaMasRapida}> Tarea más rapida</button>
     )
 }
 
