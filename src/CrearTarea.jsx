@@ -6,9 +6,9 @@ function CrearTarea({ settodoList, todoList }) {
   const mandarTarea = () => {
     if (valorInput !== "") {
       const tarea = {
-        id: todoList.length !== 0 ? String(todoList.length) : "0",
+        id: todoList.length !== 0 ? todoList.length : 0,
         nombre: valorInput,
-        fechaCreacion: new Date(),
+        fechaCreacion: Date.now(),
         fechaTachado: 0
       }
       settodoList([...todoList, tarea])

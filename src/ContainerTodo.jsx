@@ -29,15 +29,15 @@ function ContainerTodo() {
       if (tareasCompletadas.length != 0)
       {
         tareasCompletadas.sort((a, b) => {
-          const tiempoA = a.fechaTachado - a.fechaCreacion.getTime();
-          const tiempoB = b.fechaTachado - b.fechaCreacion.getTime();
+          const tiempoA = a.fechaTachado - a.fechaCreacion;
+          const tiempoB = b.fechaTachado - b.fechaCreacion;
           return tiempoA - tiempoB;
         });
-        alert(`La tarea más rápida fue: "${tareasCompletadas[0].nombre}"`);
+        const tareaMasRapida = tareasCompletadas[0];
+        const tiempoEnMs = tareaMasRapida.fechaTachado - tareaMasRapida.fechaCreacion;
+        alert(`La tarea más rápida fue: "${tareasCompletadas[0].nombre}" y tardo ${tiempoEnMs}`);
       }
-      alert(`No hay tareas tachadas`);
     }
-    alert(`No hay tareas`);
   }
 
   return (
